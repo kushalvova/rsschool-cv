@@ -1,0 +1,112 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: OpenSans;
+  font-size: 18px;
+  min-height: 100vh;
+}
+.header {
+  background-color:#d2d2d2;
+  padding: 20px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section {
+  width: 50%;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+.nav-link {
+  padding: 0 20px;
+  line-height: 50px;
+  transition: 0.3s;
+}
+a:link, a:visited {
+  text-decoration: none;  
+  color: black;
+  cursor: pointer;
+  transition: color 0.7s;
+}
+.nav-item a:link, a:visited {
+  font-weight: 600;
+}
+.nav-item a:hover, a:active {
+  color: #ff0000;
+  font-weight: 600;
+}
+html {
+  scroll-behavior: smooth; 
+}
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.main-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+.midpoint {
+  width: 240px;
+  height: 240px;
+  margin: auto;
+}
+.avatar {
+  width: 240px;
+  height: 240px;
+  padding: 20px;
+}
+.contacts-item {
+  font-weight: 600;
+}
+.contacts-item a {
+  font-weight: 300;
+  color: #969696;
+}
+.code {
+  background-color: #f0f0f0;
+  width: 455.25px;
+}
+.footer {
+  background-color:#d2d2d2;
+  padding: 20px;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.rss-logo {
+  width: 121px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: 0;
+}
+.github-link {
+  padding: 0px 20px;
+}

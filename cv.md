@@ -4,7 +4,7 @@
 - **Email:** kushal.vova@gmail.com
 - **Discord:** pikador#0057
 - [Linkedin](https://www.linkedin.com/in/uladzimir-kushal)
-## Info
+## Summary
 I want to learn a new profession. And i will do it
 ## Scills
 - HTML
