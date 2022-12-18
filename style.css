@@ -3,25 +3,25 @@
   src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
   font-family: OpenSans;
   font-size: 18px;
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-* {
-  box-sizing: border-box;
 }
 .header {
-  background-color:rgb(211, 217, 214);
+  background-color:#d2d2d2;
   padding: 20px;
 }
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+.section {
+  width: 50%;
 }
 .nav-list {
   display: flex;
@@ -44,7 +44,7 @@ a:link, a:visited {
   font-weight: 600;
 }
 .nav-item a:hover, a:active {
-  color: red;
+  color: #ff0000;
   font-weight: 600;
 }
 html {
@@ -58,8 +58,11 @@ html {
   display: flex;
   align-items: center;
 }
-.section {
-  width: 50%;
+.main-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 20px;
 }
 @media (max-width: 768px) {
   .section {
@@ -81,30 +84,29 @@ html {
 }
 .contacts-item a {
   font-weight: 300;
-  color: rgb(150, 150, 150);
+  color: #969696;
 }
 .code {
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
   width: 455.25px;
 }
 .footer {
-  background-color:rgb(210, 210, 210);
+  background-color:#d2d2d2;
   padding: 20px;
 }
-.footer_content {
+.footer-content {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.indent_right {
-  margin-right: 20px;
-}
-.rss_logo {
+.rss-logo {
   width: 121px;
   height: 45px;
   margin-left: auto;
   margin-right: 0;
 }
-.github_link {
+.github-link {
   padding: 0px 20px;
 }
