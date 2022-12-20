@@ -1,0 +1,136 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+* {
+  box-sizing: border-box;
+  /*
+  border: 1px solid #ff0000;*/
+}
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: OpenSans;
+  font-size: 18px;
+  min-height: 100vh;
+}
+.header {
+  background-color:#d2d2d2;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 8px 8px 3px 8px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section {
+  width: 50%;
+}
+.nav-list {
+  height: 110px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.nav-link {
+  margin: 5px;
+  padding: 3px;
+  transition: 0.3s;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+a:link, a:visited {
+  text-decoration: none;  
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.7s;
+}
+.nav-item a:link, a:visited {
+  font-weight: 600;
+}
+.nav-item a:hover, a:active {
+  color: #ff0000;
+  font-weight: 600;
+}
+html {
+  scroll-behavior: smooth; 
+}
+.main{
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px;
+}
+.main-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
+.midpoint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.avatar {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.link {
+  font-weight: 600;
+}
+.link a {
+  font-weight: 400;
+  color: #969696;
+}
+.pre {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+.footer {
+  background-color:#d2d2d2;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px 8px 8px;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+.rss-logo {
+  width: 121px;
+  height: 45px;
+  background-image: url(/rsschool-cv/assets/img/rss_js.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+}
+.github-link {
+  padding: 0px 20px;
+}
