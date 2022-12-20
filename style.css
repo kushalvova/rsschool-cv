@@ -2,6 +2,11 @@
   font-family: OpenSans;
   src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
+* {
+  box-sizing: border-box;
+  /*
+  border: 1px solid #ff0000;*/
+}
 body {
   display: flex;
   margin: 0;
@@ -14,7 +19,9 @@ body {
 }
 .header {
   background-color:#d2d2d2;
-  padding: 20px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 8px 8px 3px 8px;
 }
 .container {
   max-width: 1440px;
@@ -24,19 +31,23 @@ body {
   width: 50%;
 }
 .nav-list {
+  height: 110px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-wrap: wrap;
   list-style: none;
 }
 .nav-link {
-  padding: 0 20px;
-  line-height: 50px;
+  margin: 5px;
+  padding: 3px;
   transition: 0.3s;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
 }
 a:link, a:visited {
   text-decoration: none;  
-  color: black;
+  color: #000000;
   cursor: pointer;
   transition: color 0.7s;
 }
@@ -50,13 +61,10 @@ a:link, a:visited {
 html {
   scroll-behavior: smooth; 
 }
-.section-title {
-  text-transform: uppercase;
-  text-align: center;
-}
-.title {
-  display: flex;
-  align-items: center;
+.main{
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px;
 }
 .main-info {
   display: flex;
@@ -69,43 +77,59 @@ html {
     width: 100%;
   }
 }
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+}
 .midpoint {
-  width: 240px;
-  height: 240px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 .avatar {
-  width: 240px;
-  height: 240px;
-  padding: 20px;
+  max-width: 100%;
+  border-radius: 8px;
 }
-.contacts-item {
+.link {
   font-weight: 600;
 }
-.contacts-item a {
-  font-weight: 300;
+.link a {
+  font-weight: 400;
   color: #969696;
 }
-.code {
+.pre {
   background-color: #f0f0f0;
-  width: 455.25px;
+  padding: 10px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-x: auto;
+  border-radius: 8px;
 }
 .footer {
   background-color:#d2d2d2;
-  padding: 20px;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px 8px 8px;
 }
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: 20px 10px;
 }
 .rss-logo {
   width: 121px;
   height: 45px;
+  background-image: url(/assets/img/rs_school_js.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-left: auto;
-  margin-right: 0;
 }
 .github-link {
   padding: 0px 20px;
