@@ -198,9 +198,6 @@ a:hover {
 .rss-logo {
   width: 121px;
   height: 45px;
-  background-image: url('../rsschool-cv/assets/img/rss_js.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
   margin-left: auto;
 }
 .rss-logo:hover {
