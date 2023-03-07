@@ -2,135 +2,208 @@
   font-family: OpenSans;
   src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
-* {
-  box-sizing: border-box;
-  /*
-  border: 1px solid #ff0000;*/
+
+html {
+  box-sizing: border-box; 
+  scroll-behavior: smooth;  
 }
-body {
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+
+.page {
   display: flex;
-  margin: 0;
-  padding: 0;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 450px;
   font-family: OpenSans;
   font-size: 18px;
-  min-height: 100vh;
 }
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Start header */
 .header {
   background-color:#d2d2d2;
   border: 1px solid #aaaaaa;
   border-radius: 8px;
   margin: 8px 8px 3px 8px;
 }
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-.section {
-  width: 50%;
-}
-.nav-list {
-  height: 110px;
+.nav {
   display: flex;
   justify-content: flex-end;
+  height: 100px;
+  margin: 20px;
+  padding: 0px;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
 }
-.nav-link {
+.nav:last-child {
+  margin-right: 20px;
+}
+.nav__item {
   margin: 5px;
   padding: 3px;
-  transition: 0.3s;
   border: 1px solid #aaaaaa;
   border-radius: 5px;
 }
-a:link, a:visited {
-  text-decoration: none;  
+.nav__item:last-child {
+  margin-right: 0px;
+}
+.nav__link {
+  font-weight: 600;
   color: #000000;
-  cursor: pointer;
-  transition: color 0.7s;
+  transition: 0.2s;
 }
-.nav-item a:link, a:visited {
-  font-weight: 600;
+a {
+  color: #969696;
+  transition: 0.2s;
 }
-.nav-item a:hover, a:active {
+a:hover {
   color: #ff0000;
-  font-weight: 600;
 }
-html {
-  scroll-behavior: smooth; 
-}
-.main{
+
+
+/* Start main */
+.main {
   border: 1px solid #aaaaaa;
   border-radius: 8px;
   margin: 3px 8px;
 }
-.main-info {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0 20px;
+.section {
+  width: 50%;
+  padding: 5px;
 }
 @media (max-width: 768px) {
   .section {
     width: 100%;
   }
 }
-.section-title {
+.main__title {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.main__title__inner {
+  width: 50%;
+}
+.main__title__text {
   text-transform: uppercase;
   text-align: center;
-  padding: 10px;
 }
-.title {
+.main__title__photo-wrapper {
+  width: 200px;
+  margin-left: 14vw;
+}
+.main__title__photo {
+  max-width:100%;
+  height:auto;
+  border-radius: 50%;
+}
+.main__info {
   display: flex;
   align-items: center;
-  padding: 20px 0px;
+  flex-wrap: wrap;
+  margin: 0 20px;
 }
-.midpoint {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+
+.main__info__list {
+  list-style:none;
+  padding-left: 45px;
 }
-.avatar {
-  max-width: 100%;
-  border-radius: 8px;
-}
-.link {
+
+.main__info__item {
   font-weight: 600;
+  vertical-align: middle;
+  position: relative;
 }
-.link a {
+.main__info__item:before {
+  content: '';
+  position: absolute;
+  vertical-align: middle;
+  background-size: contain;
+  background: no-repeat;
+  height: 22px;
+}
+.main__info__item:nth-child(1):before {
+  width: 18px;
+  top: 4px;
+  left: -31px;
+  background-image: url('../rsschool-cv/assets/img/phone.svg');
+}
+.main__info__item:nth-child(2):before {
+  width: 19px;
+  top: 2px;
+  left: -31px;
+  background-image: url('../rsschool-cv/assets/img/mail.svg');
+}
+.main__info__item:nth-child(3):before {
+  width: 23px;
+  top: 2px;
+  left: -32px;
+  background-image: url('../rsschool-cv/assets/img/discord.svg');  
+}
+.main__info__item:nth-child(4):before {
+  width: 18px;
+  top: 3px;
+  left: -30px;
+  background-image: url('../rsschool-cv/assets/img/linkedin.svg');
+}
+.main__info__item a {
   font-weight: 400;
-  color: #969696;
 }
-.pre {
+.code-example {
   background-color: #f0f0f0;
   padding: 10px;
   margin: 0;
   overflow-x: hidden;
   overflow-x: auto;
   border-radius: 8px;
+  font-size: 14px;
 }
+
+
+/* Start footer*/
 .footer {
   background-color:#d2d2d2;
   border: 1px solid #aaaaaa;
   border-radius: 8px;
   margin: 3px 8px 8px 8px;
 }
-.footer-content {
+.footer__inner {
   display: flex;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px;
+}
+.github-link {
+  width: 185px;
+  height: 25px;
+  padding: 0px 45px;
+  background-image: url('../rsschool-cv/assets/img/github.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: 2px;
 }
 .rss-logo {
   width: 121px;
   height: 45px;
-  background-image: url(/rsschool-cv/assets/img/rss_js.svg);
+  background-image: url('../rsschool-cv/assets/img/rss_js.svg');
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: auto;
 }
-.github-link {
-  padding: 0px 20px;
+.rss-logo:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
 }
