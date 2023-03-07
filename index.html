@@ -8,79 +8,87 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./assets/favicon.ico">
 </head>
-<body>
+<body class="page">
   <header class="header">
     <nav class="container">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="https://kushalvova.github.io/rsschool-cv/" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-        <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
-        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-        <li class="nav-item"><a href="#code" class="nav-link">Code&nbsp;Example</a></li>
-        <li class="nav-item"><a href="#experince" class="nav-link">Experince</a></li>
-        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-        <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+      <ul class="nav">
+        <li class="nav__item"><a class="nav__link" href="https://kushalvova.github.io/rsschool-cv/">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contacts">Contacts</a></li>
+        <li class="nav__item"><a class="nav__link" href="#summary">Summary</a></li>
+        <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+        <li class="nav__item"><a class="nav__link" href="#code">Code&nbsp;Example</a></li>
+        <li class="nav__item"><a class="nav__link" href="#experince">Experince</a></li>
+        <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+        <li class="nav__item"><a class="nav__link" href="#education">Education</a></li>
+        <li class="nav__item"><a class="nav__link" href="#languages">Languages</a></li>
       </ul>
     </nav>
   </header>
   <main class="main">
     <div class="container">
-      <section class="title">
-        <div class="section">
-          <h1 class="section-title">Uladzimir Kushal</h1>
-          <h3 class="section-title">Beginner front-end developer</h3>
+      <section class="main__title">
+        <div class="main__title__inner">
+          <h1 class="main__title__text">Uladzimir Kushal</h1>
+          <h3 class="main__title__text">Front-end developer</h3>
         </div>
-        <div class="section midpoint">
-          <img src="./assets/img/userpic.jpg" alt="my avatar" class="avatar">
+        <div class="main__title__inner main__title__photo-wrapper">
+          <img class="main__title__photo" src="./assets/img/photo.jpg" alt="my photo">
         </div>
       </section>
-      <div class="main-info">
+      <div class="main__info">
         <section class="section" id="contacts">
           <h2>Contacts</h2>
-          <ul>
-            <li class="link">Phone number:&nbsp;<a href="tel:+375447855525">+375(44)7855525</a></li>
-            <li class="link">Email:&nbsp;<a href="mailto:ask@htmlbook.ru">kushal.vova@gmail.com</a></li>
-            <li class="link">Discord:&nbsp;<a href="https://discord.gg/616683243353407489" target="blank">pikador#0057</a></li>
-            <li class="link">Linkedin:&nbsp;<a href="https://www.linkedin.com/in/uladzimir-kushal" target="blank">Uladzimir Kushal</a></li>
+          <ul class="main__info__list">
+            <li class="main__info__item">Phone number:&nbsp;<a href="tel:+375447855525">+375(44)7855525</a></li>
+            <li class="main__info__item">Email:&nbsp;<a href="mailto:ask@htmlbook.ru">kushal.vova@gmail.com</a></li>
+            <li class="main__info__item">Discord:&nbsp;<a href="https://discord.gg/616683243353407489" target="blank">pikador#0057</a></li>
+            <li class="main__info__item">Linkedin:&nbsp;<a href="https://www.linkedin.com/in/uladzimir-kushal" target="blank">Uladzimir Kushal</a></li>
           </ul>
         </section>
         <section class="section" id="summary">
           <h2>Summury</h2>
-          <p>I am currently working as an NDT engineer. I have always liked math and programming. I want to learn how to create applications. My goal is to take part in the development of a truly interesting and useful product. I want to learn a new profession. And i will do it.</p>
+          <p>Ever since my school days I liked mathematics and programming. And so I decided to change my profession and become a front-end developer. I am currently learning JavaScript. My goal is to take part in the development of a really interesting and useful product. I believe, that my ability to learn and acquire new skills will help me become a sought-after specialist.</p>
         </section>
         <section class="section" id="skills">
           <h2>Skills</h2>
           <ul>
-            <li>Git</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript (Basic)</li>
-            <li>Java (Basic)</li>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+            <li>Git/GitHub</li>
+            <li>VS Code</li>
           </ul>
         </section>
         <section class="section" id="code">
           <h2>Code&nbsp;Example</h2>
-          <pre class="pre">
-public class Multiply {
-  public static void main(String[] args) {  
-    Double multiply;
-    Double a = 5.2;
-    Double b = 2.0;
-    multiply = a*b;
-    System.out.println(multiply);
-  }
-}</pre>
+          <p>Clocky Mc Clock-Face KATA from CODEWARS: Given the angle (in degrees) of the hour-hand, return the time in 12 hour HH:MM format. Round down to the nearest minute.</p>
+          <pre class="code-example">
+var whatTimeIsIt = function(angle) {
+    if (angle == 0) return "12:00";
+    let time = '';
+    let hours = String(Math.floor(angle/30));
+    hours = hours.length == 2 ? hours : ("0" + hours);
+    let minutes = String(Math.floor((angle - hours * 30) * 2));
+    hours = hours == "00" ? "12" : hours;
+    minutes = minutes.length == 2 ? minutes : ("0" + minutes);
+    time = hours + ":" + minutes;
+    return time;
+}</pre>            
         </section>
         <section class="section" id="experince">
           <h2>Experince</h2>
-          <p>Everything has its time...</p>
+          <ul>
+            <li>HTML and CSS Tutorials on w3schools</li>
+            <li>JavaScript Manual on learnjavascript.ru</li>
+            <li><a href="https://app.rs.school/certificate/f12zh4e0" target="blank">RS Schools «JavaScript/Front-end»</a></li>
+          </ul>
         </section>
         <section class="section" id="projects">
           <h2>Projects</h2>
-          <span class="link">
-            <a href="https://kushalvova.github.io/rsschool-cv/" target="blank">CV RSSchool</a>
-          </span>
+          <ul>
+            <li><a href="https://kushalvova.github.io/plants/" target="blank">Plants</a></li>
+            <li><a href="https://kushalvova.github.io/momentum/" target="blank">Momentum</a></li>
+          </ul>
         </section>
         <section class="section" id="education">
           <h2>Education</h2>
@@ -93,13 +101,13 @@ public class Multiply {
             <li>Belarusian - native</li>
           </ul>
         </section>
-      </div>  
+      </div>
     </div>
   </main>
   <footer class="footer">
-    <div class="container footer-content">
-        <p>© 2022<a href="https://github.com/kushalvova" target="blank" class="github-link">kushalvova</a></p>
-        <a href="https://rs.school/js/" target="blank" class="rss-logo"></a>
+    <div class="container footer__inner">
+        <p>© 2022<a class="github-link" href="https://github.com/kushalvova" target="blank">kushalvova</a></p>
+        <a class="rss-logo" href="https://rs.school/js/" target="blank"></a>
     </div>
   </footer>    
 </body>
