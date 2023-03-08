@@ -42,6 +42,9 @@ a {
 .nav {
   display: flex;
   justify-content: flex-end;
+  height: 100px;
+  margin: 20px;
+  padding: 0px;
   align-items: center;
   height: 100%;
 }
@@ -149,8 +152,7 @@ a:hover {
     height: 30px;
     margin: 40px 20px auto auto;
     cursor: pointer;
-  }
-  
+  }  
 }
 
 
