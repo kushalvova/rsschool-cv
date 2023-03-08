@@ -33,7 +33,7 @@ a {
 
 /* Start header */
 .header {
-  height: 111px;
+  height: 131px;
   margin: 8px 8px 3px 8px;
   background-color:#d2d2d2;
   border: 1px solid #aaaaaa;
@@ -147,7 +147,7 @@ a:hover {
     justify-content: space-between;
     width: 40px;
     height: 30px;
-    margin: 40px 20px auto auto;
+    margin: 50px 20px auto auto;
     cursor: pointer;
   }  
 }
@@ -181,13 +181,14 @@ a:hover {
   text-align: center;
 }
 .main__title__photo-wrapper {
-  width: 200px;
+  width: 250px;
   margin-left: 14vw;
 }
 .main__title__photo {
   max-width:100%;
   height:auto;
   border-radius: 50%;
+  border: #969696 double 4px;
 }
 .main__info {
   display: flex;
