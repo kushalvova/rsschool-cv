@@ -33,10 +33,11 @@ a {
 
 /* Start header */
 .header {
+  height: 111px;
+  margin: 8px 8px 3px 8px;
   background-color:#d2d2d2;
   border: 1px solid #aaaaaa;
-  border-radius: 8px;
-  margin: 8px 8px 3px 8px;
+  border-radius: 8px;  
 }
 .nav {
   display: flex;
@@ -45,10 +46,18 @@ a {
   margin: 20px;
   padding: 0px;
   align-items: center;
+  height: 100%;
+}
+.nav__list {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  padding: 0px;  
   list-style: none;
 }
-.nav:last-child {
+.nav__list:last-child {
   margin-right: 20px;
 }
 .nav__item {
@@ -71,6 +80,79 @@ a {
 }
 a:hover {
   color: #ff0000;
+}
+.header__burger {
+  display: none;
+}
+.header__burger__line {
+  width: 100%;
+  height: 3px;
+  background-color: #aaaaaa;
+}
+@media (max-width: 950px) {
+  .nav {
+    display: inline;
+    position: fixed;
+    height: 480px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(150, 150, 150, 0.97);
+    margin: 0px;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.2s all linear;
+  }
+  .nav-active {
+    transform: translateX(0);
+  }
+  .nav__close {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .nav__close__line {
+    display: block;
+    height: 3px;    
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .nav__close__line:first-child {
+    transform: rotate(45deg); 
+  }
+  .nav__close__line:last-child {
+    transform: rotate(-45deg); 
+  }
+  .nav__list {
+    width: 250px;
+    margin: 60px auto auto 50px; 
+    
+  }
+  .nav__list:last-child {
+    margin-right: 50px;
+}
+  .nav__item {
+    height: 35px;
+    width: 100%;
+    border: 0px;
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    margin: 40px 20px auto auto;
+    cursor: pointer;
+  }  
 }
 
 
