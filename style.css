@@ -1,0 +1,286 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+html {
+  box-sizing: border-box; 
+  scroll-behavior: smooth;  
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 450px;
+  font-family: OpenSans;
+  font-size: 18px;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Start header */
+.header {
+  height: 131px;
+  margin: 8px 8px 3px 8px;
+  background-color:#d2d2d2;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;  
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  padding: 0px;  
+  list-style: none;
+}
+.nav__list:last-child {
+  margin-right: 20px;
+}
+.nav__item {
+  margin: 5px;
+  padding: 3px;
+  border: 1px solid #aaaaaa;
+  border-radius: 5px;
+}
+.nav__item:last-child {
+  margin-right: 0px;
+}
+.nav__link {
+  font-weight: 600;
+  color: #000000;
+  transition: 0.2s;
+}
+a {
+  color: #969696;
+  transition: 0.2s;
+}
+a:hover {
+  color: #ff0000;
+}
+.header__burger {
+  display: none;
+}
+.header__burger__line {
+  width: 100%;
+  height: 3px;
+  background-color: #aaaaaa;
+}
+@media (max-width: 950px) {
+  .nav {
+    display: inline;
+    position: fixed;
+    height: 480px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(150, 150, 150, 0.97);
+    margin: 0px;
+    z-index: 10;
+    transform: translateX(100%);
+    transition: 0.2s all linear;
+  }
+  .nav-active {
+    transform: translateX(0);
+  }
+  .nav__close {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .nav__close__line {
+    display: block;
+    height: 3px;    
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .nav__close__line:first-child {
+    transform: rotate(45deg); 
+  }
+  .nav__close__line:last-child {
+    transform: rotate(-45deg); 
+  }
+  .nav__list {
+    width: 250px;
+    margin: 60px auto auto 50px; 
+    
+  }
+  .nav__list:last-child {
+    margin-right: 50px;
+}
+  .nav__item {
+    height: 35px;
+    width: 100%;
+    border: 0px;
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+  .header__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    margin: 50px 20px auto auto;
+    cursor: pointer;
+  }  
+}
+
+
+/* Start main */
+.main {
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px;
+}
+.section {
+  width: 50%;
+  padding: 5px;
+}
+@media (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}
+.main__title {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.main__title__inner {
+  width: 50%;
+}
+.main__title__text {
+  text-transform: uppercase;
+  text-align: center;
+}
+.main__title__photo-wrapper {
+  width: 250px;
+  margin-left: 14vw;
+}
+.main__title__photo {
+  max-width:100%;
+  height:auto;
+  border-radius: 50%;
+  border: #969696 double 4px;
+}
+.main__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 20px;
+}
+
+.main__info__list {
+  list-style:none;
+  padding-left: 45px;
+}
+
+.main__info__item {
+  font-weight: 600;
+  vertical-align: middle;
+  position: relative;
+}
+.main__info__item:before {
+  content: '';
+  position: absolute;
+  vertical-align: middle;
+  background-size: contain;
+  background: no-repeat;
+  height: 22px;
+}
+.main__info__item:nth-child(1):before {
+  width: 18px;
+  top: 4px;
+  left: -31px;
+  background-image: url('../rsschool-cv/assets/img/phone.svg');
+}
+.main__info__item:nth-child(2):before {
+  width: 19px;
+  top: 2px;
+  left: -31px;
+  background-image: url('../rsschool-cv/assets/img/mail.svg');
+}
+.main__info__item:nth-child(3):before {
+  width: 23px;
+  top: 2px;
+  left: -32px;
+  background-image: url('../rsschool-cv/assets/img/discord.svg');  
+}
+.main__info__item:nth-child(4):before {
+  width: 18px;
+  top: 3px;
+  left: -30px;
+  background-image: url('../rsschool-cv/assets/img/linkedin.svg');
+}
+.main__info__item a {
+  font-weight: 400;
+}
+.code-example {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-x: auto;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+
+/* Start footer*/
+.footer {
+  background-color:#d2d2d2;
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  margin: 3px 8px 8px 8px;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.github-link {
+  width: 185px;
+  height: 25px;
+  padding: 0px 45px;
+  background-image: url('../rsschool-cv/assets/img/github.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position-x: 20px;
+  background-position-y: 2px;
+}
+.rss-logo {
+  width: 121px;
+  height: 45px;
+  margin-left: auto;
+}
+.rss-logo:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+}
